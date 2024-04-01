@@ -57,7 +57,7 @@
   --fs-5: 2.4rem;
   --fs-6: 2.2rem;
   --fs-7: 2rem;
-  --fs-8: 1.8rem;
+  --fs-8: 1.45rem;
   --fs-9: 1.5rem;
   --fs-10: 1.4rem;
 
@@ -1195,7 +1195,7 @@ body {
    */
 
   .hero {
-    background-image: url("../images/hero.jpg");
+    background-image: url("../images/sprout.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
