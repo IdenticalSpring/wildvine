@@ -213,7 +213,7 @@
               </div>
 
               <div>
-                <h3 class="h4 item-title">Các mẫu truyện</h3>
+                <h3 class="h4 item-title">Tính năng</h3>
 
                 <p class="item-text">
                   Our website contain lot of stories about smoking topic.
@@ -265,7 +265,7 @@
       <section class="section about" id="about">
         <div class="container">
 
-          <div class="about-banner" id="xumenhBanner">
+          <div class="about-banner" id="xumenhBanner" style="display: none;">
             <h2 class="deco-title">About Us</h2>
             <img src="./assets/images/deco-img.png" width="58" height="261" alt="" class="deco-img">
             <div class="banner-row">
@@ -274,12 +274,12 @@
                     <img src="./assets/images/hoa.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
                 </div>
                 <div class="banner-col">
-                    <img src="./assets/images/about-banner-3.jpg" width="250" height="277" loading="lazy" alt="Elephant" class="about-img about-img-3 w-100">
-                    <img src="./assets/images/about-banner-4.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
+                    <img src="./assets/images/giang.jpg" width="250" height="277" loading="lazy" alt="Elephant" class="about-img about-img-3 w-100">
+                    <img src="./assets/images/hoang1.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
                 </div>
             </div>
         </div>
-        <div class="about-banner" id="muctieuBanner" style="display: none;">
+        <div class="about-banner" id="muctieuBanner" >
           <h2 class="deco-title">About Us</h2>
           <img src="./assets/images/deco-img.png" width="58" height="261" alt="" class="deco-img">
           <div class="banner-row">
@@ -299,11 +299,11 @@
         <div class="banner-row">
             <div class="banner-col">
                 <img src="./assets/images/doctor.jpg" width="315" height="380" loading="lazy" alt="Tiger" class="about-img w-100">
-                <img src="./assets/images/bla.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
+                <img src="./assets/images/book.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
             </div>
             <div class="banner-col">
                 <img src="./assets/images/coco.jpg" width="250" height="277" loading="lazy" alt="Elephant" class="about-img about-img-3 w-100">
-                <img src="./assets/images/about-banner-1.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
+                <img src="./assets/images/cocoo.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
             </div>
         </div>
     </div>
@@ -321,12 +321,13 @@
             </h2>
 
             <ul class="tab-nav">
-              <li><button id="xumenhBtn" class="tab-btn active" onclick="showBannerAndContent('xumenh', 'xumenh', this)">Xứ mệnh</button></li>
-              <li><button id="muctieuBtn" class="tab-btn" onclick="showBannerAndContent('muctieu', 'muctieu', this)">Mục tiêu</button></li>
+              <li><button id="muctieuBtn" class="tab-btn active" onclick="showBannerAndContent('muctieu', 'muctieu', this)">Mục tiêu</button></li>
               <li><button id="kehoachBtn" class="tab-btn" onclick="showBannerAndContent('kehoach', 'kehoach', this)">Kế hoạch</button></li>
+              <li><button id="xumenhBtn" class="tab-btn" onclick="showBannerAndContent('xumenh', 'xumenh', this)">Xứ mệnh</button></li>
+
           </ul>
 
-            <div class="tab-content" id="xumenhContent" >
+            <div class="tab-content" id="xumenhContent"  style="display: none;">
 
               <p class="section-text">
                 Nhận thấy rằng tình trạng sử dụng thuốc lá, thuốc lá điện tử đang diễn ra một cách thường xuyên ở trường Đại học HUTECH nói riêng và cộng đồng sinh viên nói chung. Chúng tôi tạo nên nền tảng này với mục đích nâng cao ý thức về tác hại của việc sử dụng thuốc lá và hỗ trợ các bạn sinh viên có ý định từ bỏ thuốc lá. Đồng thời với khẩu hiệu "Từ một sức khỏe cá nhân, vì một cộng đồng" chúng tôi tổ chức một quỹ cộng đồng hỗ trợ xây dựng một thư viện tại xã miền núi B'Lá, Bảo Lâm, Lâm Đồng để hỗ trợ các em nhỏ vùng cao.
@@ -376,7 +377,7 @@
 
             </div>
 
-            <div class="tab-content" id="muctieuContent" style="display: none;">
+            <div class="tab-content" id="muctieuContent">
 
               <p class="section-text">
                 Mục tiêu của dự án này nhằm nâng cao nhận thức của các bạn sinh viên tại trường HUTECH nói riêng, và cộng đồng sinh viên nói chung về tác hại của thuốc lá. Đồng thời từ xứ mệnh "Từ một sức khỏe cá nhân, vì cả cộng đồng" chúng tôi hướng sự chú ý của sinh viên đến một quỹ cộng đồng dành cho các em nhỏ, thay vì chi tiêu cho việc sử dụng thuốc lá.
