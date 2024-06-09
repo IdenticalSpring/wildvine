@@ -1210,7 +1210,14 @@ body {
     transform: translate(-50%, -50%);
     z-index:  1;
   }
-  
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make sure the container takes the full width */
+    height: 100%; /* Make sure the container takes the full height */
+    margin-bottom: 50px;
+  }
   .hero .container {
     position: relative;
     z-index: 1;
