@@ -31,16 +31,25 @@
     
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/banner.js"></script>
-  <script>document.getElementById('mute-unmute-button').addEventListener('click', function() {
-    var video = document.getElementById('background-video');
-    if (video.muted) {
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('background-video');
       video.muted = false;
-      this.textContent = 'Mute Video';
-    } else {
-      video.muted = true;
-      this.textContent = 'Unmute Video';
-    }
-  });
+      video.play().catch(function(error) {
+        console.log('Autoplay was prevented:', error);
+      });
+    });
+  
+    document.getElementById('mute-unmute-button').addEventListener('click', function() {
+      var video = document.getElementById('background-video');
+      if (video.muted) {
+        video.muted = false;
+        this.textContent = 'Mute Video';
+      } else {
+        video.muted = true;
+        this.textContent = 'Unmute Video';
+      }
+    });
   </script>
 
   <!-- 
@@ -167,7 +176,7 @@
       -->
 
       <section class="hero" id="home">
-        <video id="background-video" autoplay muted loop class="background-video">
+        <video id="background-video" autoplay loop class="background-video">
           <source src="./assets/MIỀN TÂY - SHORT FILM _ Official Video (720p).mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -192,6 +201,9 @@
           </button>
         </div>
       </section>
+      
+      
+      
       
       
 
@@ -1260,7 +1272,26 @@
 
   <!-- 
     - custom js link
-  --
+  -->
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('background-video');
+    video.muted = false;
+    video.play().catch(function(error) {
+      console.log('Autoplay was prevented:', error);
+    });
+  });
 
+  document.getElementById('mute-unmute-button').addEventListener('click', function() {
+    var video = document.getElementById('background-video');
+    if (video.muted) {
+      video.muted = false;
+      this.textContent = 'Mute Video';
+    } else {
+      video.muted = true;
+      this.textContent = 'Unmute Video';
+    }
+  });
+</script>
 </html>
