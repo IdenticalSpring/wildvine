@@ -31,6 +31,17 @@
     
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/banner.js"></script>
+  <script>document.getElementById('mute-unmute-button').addEventListener('click', function() {
+    var video = document.getElementById('background-video');
+    if (video.muted) {
+      video.muted = false;
+      this.textContent = 'Mute Video';
+    } else {
+      video.muted = true;
+      this.textContent = 'Unmute Video';
+    }
+  });
+  </script>
 
   <!-- 
     - ionicon link
@@ -50,7 +61,7 @@
     <div class="container">
 
       <h1>
-        <a href="#" class="logo">xathuocdi</a>
+        <a href="#" class="logo">MIENTAY</a>
       </h1>
 
       <select name="language" class="lang-switch">
@@ -71,7 +82,7 @@
           <ion-icon name="close-outline"></ion-icon>
         </button>
 
-        <a href="#" class="logo">xathuocdi</a>
+        <a href="#" class="logo">MIENTAY</a>
 
         <ul class="navbar-list">
 
@@ -93,19 +104,19 @@
 
           <li>
             <a href="#service" class="navbar-link" data-nav-link>
-              <span>Các mẫu truyện</span>
+              <span>Tin tức</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
           </li>
 
-          <li>
+          <!-- <li>
             <a href="#donate" class="navbar-link" data-nav-link>
               <span>Quỹ B'Lá</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
             </a>
-          </li>
+          </li> -->
 
           <li>
             <a href="#event" class="navbar-link" data-nav-link>
@@ -134,7 +145,7 @@
         </button>
 
         <button class="btn btn-primary">
-          <span>Quỹ B'Lá</span>
+          <span>Quỹ Môi Trường</span>
 
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
         </button>
@@ -156,30 +167,33 @@
       -->
 
       <section class="hero" id="home">
+        <video id="background-video" autoplay muted loop class="background-video">
+          <source src="./assets/MIỀN TÂY - SHORT FILM _ Official Video (720p).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <div class="container">
-
           <p class="section-subtitle">
             <img src="./assets/images/subtitle-img-white.png" width="32" height="7" alt="Wavy line">
-
             <span>Chào mừng đến với "Xanh lá" thuốc đi</span>
           </p>
-
           <h2 class="h1 hero-title">
-            Từ bỏ thuốc vì một  <strong>Cộng đồng "Xanh" </strong>
+            Miền Tây
+            <strong> </strong>
           </h2>
-
           <p class="hero-text">
-            "XANH LÁ" THUỐC ĐI được tạo ra với mục đích nâng cao ý thức sức khỏe cộng đồng về tác hại của việc sử dụng thuốc lá, hỗ trợ các cá nhân cần giúp đỡ trong quá trình từ bỏ thuốc. Bên cạnh đó, "Xanh lá" đồng thời kết hợp với một quỹ cộng đồng nhằm xây dựng một thư viện sách cho trẻ em ở vùng cao xã B'Lá huyện Bảo Lâm, Tỉnh Lâm Đồng.          </p>
-
-          <button class="btn btn-primary">
-            <span>Thông tin sức khỏe</span>
-
+            Miền Tây là vùng đất nằm ở phía Nam xa xôi của Tổ quốc. Nơi đây có những dòng sông đỏ nặng phù sa và vườn trái cây quanh năm xanh tươi, chín mọng. 
+          </p>
+          <button class="btn btn-primary" id="unmute-button">
+            <span>Thông tin </span>
             <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
           </button>
-
+          <button class="btn btn-secondary" id="mute-unmute-button">
+            <span>Unmute Video</span>
+          </button>
         </div>
       </section>
-
+      
+      
 
 
 
@@ -266,30 +280,30 @@
         <div class="container">
 
           <div class="about-banner" id="xumenhBanner" style="display: none;">
-            <h2 class="deco-title">About Us</h2>
+            <h2 class="deco-title">Mùa nước nổi</h2>
             <img src="./assets/images/deco-img.png" width="58" height="261" alt="" class="deco-img">
             <div class="banner-row">
                 <div class="banner-col">
-                    <img src="./assets/images/xuan.jpg" width="315" height="380" loading="lazy" alt="Tiger" class="about-img w-100">
-                    <img src="./assets/images/hoa.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
+                    <img src="./assets/images/man1.jpg" width="315" height="380" loading="lazy" alt="Tiger" class="about-img w-100">
+                    <img src="./assets/images/man2.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
                 </div>
                 <div class="banner-col">
-                    <img src="./assets/images/giang.jpg" width="250" height="277" loading="lazy" alt="Elephant" class="about-img about-img-3 w-100">
-                    <img src="./assets/images/hoang1.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
+                    <img src="./assets/images/man3.webp" width="250" height="277" loading="lazy" alt="Elephant" class="about-img about-img-3 w-100">
+                    <img src="./assets/images/man4.webp" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
                 </div>
             </div>
         </div>
         <div class="about-banner" id="muctieuBanner" >
-          <h2 class="deco-title">About Us</h2>
+          <h2 class="deco-title">Mùa nước nổi</h2>
           <img src="./assets/images/deco-img.png" width="58" height="261" alt="" class="deco-img">
           <div class="banner-row">
               <div class="banner-col">
-                  <img src="./assets/images/kid.jpg" width="315" height="380" loading="lazy" alt="Tiger" class="about-img w-100">
-                  <img src="./assets/images/hoang.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
+                  <img src="./assets/images/mine 2.jpg" width="315" height="380" loading="lazy" alt="Tiger" class="about-img w-100">
+                  <img src="./assets/images/2.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
               </div>
               <div class="banner-col">
-                  <img src="./assets/images/hutech.jpg" width="250" height="277" loading="lazy" alt="Elep hant" class="about-img about-img-3 w-100">
-                  <img src="./assets/images/hutehc-1.jpeg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
+                  <img src="./assets/images/sen.jpg" width="250" height="277" loading="lazy" alt="Elep hant" class="about-img about-img-3 w-100">
+                  <img src="./assets/images/mien.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
               </div>
           </div>
       </div>
@@ -298,12 +312,12 @@
         <img src="./assets/images/deco-img.png" width="58" height="261" alt="" class="deco-img">
         <div class="banner-row">
             <div class="banner-col">
-                <img src="./assets/images/doctor.jpg" width="315" height="380" loading="lazy" alt="Tiger" class="about-img w-100">
-                <img src="./assets/images/book.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
+                <img src="./assets/images/bien.jpeg" width="315" height="380" loading="lazy" alt="Tiger" class="about-img w-100">
+                <img src="./assets/images/bien3.jpg" width="386" height="250" loading="lazy" alt="Panda" class="about-img about-img-2 w-100">
             </div>
             <div class="banner-col">
-                <img src="./assets/images/coco.jpg" width="250" height="277" loading="lazy" alt="Elephant" class="about-img about-img-3 w-100">
-                <img src="./assets/images/cocoo.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
+                <img src="./assets/images/bien4.jpg" width="250" height="277" loading="lazy" alt="Elephant" class="about-img about-img-3 w-100">
+                <img src="./assets/images/bien 2.jpg" width="315" height="380" loading="lazy" alt="Deer" class="about-img w-100">
             </div>
         </div>
     </div>
@@ -313,27 +327,27 @@
             <p class="section-subtitle">
               <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
 
-              <span>Tại sao lại chọn chúng tôi</span>
+              <span>Miền Tây trong biến đổi khí hậu</span>
             </p>
 
             <h2 class="h2 section-title">
-              Từ một sức khỏe cá nhân <strong>Vì cả cộng đồng</strong>
+              Miền Tây trong<strong>biến đổi khí hậu</strong>
             </h2>
 
             <ul class="tab-nav">
-              <li><button id="muctieuBtn" class="tab-btn active" onclick="showBannerAndContent('muctieu', 'muctieu', this)">Mục tiêu</button></li>
-              <li><button id="kehoachBtn" class="tab-btn" onclick="showBannerAndContent('kehoach', 'kehoach', this)">Kế hoạch</button></li>
-              <li><button id="xumenhBtn" class="tab-btn" onclick="showBannerAndContent('xumenh', 'xumenh', this)">Xứ mệnh</button></li>
+              <li><button id="muctieuBtn" class="tab-btn active" onclick="showBannerAndContent('muctieu', 'muctieu', this)">Mùa nước lớn</button></li>
+              <li><button id="kehoachBtn" class="tab-btn" onclick="showBannerAndContent('kehoach', 'kehoach', this)">Biến đổi khí hậu</button></li>
+              <li><button id="xumenhBtn" class="tab-btn" onclick="showBannerAndContent('xumenh', 'xumenh', this)">Xâm nhập mặn</button></li>
 
           </ul>
 
             <div class="tab-content" id="xumenhContent"  style="display: none;">
 
               <p class="section-text">
-                Nhận thấy rằng tình trạng sử dụng thuốc lá, thuốc lá điện tử đang diễn ra một cách thường xuyên ở trường Đại học HUTECH nói riêng và cộng đồng sinh viên nói chung. Chúng tôi tạo nên nền tảng này với mục đích nâng cao ý thức về tác hại của việc sử dụng thuốc lá và hỗ trợ các bạn sinh viên có ý định từ bỏ thuốc lá. Đồng thời với khẩu hiệu "Từ một sức khỏe cá nhân, vì một cộng đồng" chúng tôi tổ chức một quỹ cộng đồng hỗ trợ xây dựng một thư viện tại xã miền núi B'Lá, Bảo Lâm, Lâm Đồng để hỗ trợ các em nhỏ vùng cao.
+                Từ một mảnh đất trù phú, được thiên nhiên ưu ái sông nước từ bao đời, nay lại phải chịu cảnh thiếu nước sinh hoạt do "xâm nhập mặn". Từng hộ gia đình phải xếp hàng để có thể nhận từng "can nước" sinh hoạt qua ngày.
               </p>
 
-              <ul class="tab-list">
+              <!-- <ul class="tab-list">
 
                 <li class="tab-item">
                   <div class="item-icon">
@@ -367,9 +381,9 @@
                   <p class="tab-text">Tạo nên một quỹ cộng đồng</p>
                 </li>
 
-              </ul>
+              </ul> -->
 
-              <button class="btn btn-secondary">
+              <button class="btn btn-secondary" onclick="window.location.href='https://nld.com.vn/ban-doc/nong-dan-mien-tay-xep-hang-dai-cho-nuoc-ngot-trong-canh-han-man-20200322120214422.htm'">
                 <span>Tìm Hiểu Thêm</span>
 
                 <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -380,10 +394,9 @@
             <div class="tab-content" id="muctieuContent">
 
               <p class="section-text">
-                Mục tiêu của dự án này nhằm nâng cao nhận thức của các bạn sinh viên tại trường HUTECH nói riêng, và cộng đồng sinh viên nói chung về tác hại của thuốc lá. Đồng thời từ xứ mệnh "Từ một sức khỏe cá nhân, vì cả cộng đồng" chúng tôi hướng sự chú ý của sinh viên đến một quỹ cộng đồng dành cho các em nhỏ, thay vì chi tiêu cho việc sử dụng thuốc lá.
-              </p>
+                Tháng Bảy nước nhảy khỏi bờ, người dân miền Tây quê tôi gọi là mùa nước nổi. Con nước từ thượng nguồn sông Mê-kông đổ về dòng Cửu Long rồi tràn về các kênh rạch, ao hồ. Ruộng đồng ngập nước mang theo một nỗi buồn man mác ghim vào điệu lý, câu hò. Nhưng mùa nước nổi cũng là mùa sự sống hồi sinh của người dân miền Tây. Giữa cái trắng trời, trắng đất của nước lũ tràn về mênh mang là một sự sống mới đang hồi sinh, nảy nở. Bàn tay ma thuật của tạo hóa luôn nhào nặn ra kiệt tác từ cái gọi là nghịch lý của cuộc đời. Nhưng thiên nhiên cũng hào phóng ban tặng con người nơi đây bao sản vật độc đáo vào mùa nước lũ. Phù sa đỏ theo con nước ròng cuồn cuộn đổ về ruộng đồng mang theo mạch nguồn nhựa sống âm thầm bồi đắp cho bờ bãi tốt tươi, trù phú.               </p>
 
-              <ul class="tab-list">
+              <!-- <ul class="tab-list">
 
                 <li class="tab-item">
                   <div class="item-icon">
@@ -417,9 +430,9 @@
                   <p class="tab-text">Tạo nên một quỹ cộng đồng</p>
                 </li>
 
-              </ul>
+              </ul> -->
 
-              <button class="btn btn-secondary">
+              <button class="btn btn-secondary" onclick="window.location.href='https://www.youtube.com/watch?v=Pi35wczmyi8'">
                 <span>Tìm Hiểu Thêm</span>
 
                 <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -431,10 +444,9 @@
 
               <p class="section-text">
                
-                Cho đến thời điểm hiện tại, chúng tôi đã tạo nên được website này với mục đích cung cấp thông tin thông tin, nâng cao nhận thức của các bạn sinh viên thông qua những mẫu truyện ngắn, clip ngắn. Và đã có sự kế nối của một chuyên gia y tế: Thạc sĩ-Trưởng Điều dưỡng BV Đa Khoa Ô Môn, có thể hỗ trợ các bạn trong quá trình từ bỏ việc sử dụng thuốc lá. Đối với Quỹ B'Lá, hiện tại chúng tôi đã xây dựng thêm một tủ sách nho nhỏ ngay tại B'Lá Coconut Home. Trong tương lai, với sự ủng hộ của các bạn sinh viên, và từ cộng đồng, chúng tôi cam kết sẽ phát triển dự án này ngày càng tốt và hoàn thiện hơn!
-              </p>
+                Biến đổi khí hậu đang có những tác động mạnh mẽ đến ĐBSCL: nước nhiễm mặn bất thường trong mùa mưa, thiếu nước ngọt trầm trọng, nhiều vùng đất bị nước “ngoạm”, cá tôm không còn nữa...              </p>
 
-              <ul class="tab-list">
+              <!-- <ul class="tab-list">
 
                 <li class="tab-item">
                   <div class="item-icon">
@@ -468,9 +480,9 @@
                   <p class="tab-text">Tạo nên một quỹ cộng đồng</p>
                 </li>
 
-              </ul>
+              </ul> -->
 
-              <button class="btn btn-secondary">
+              <button class="btn btn-secondary" onclick="window.location.href='https://tuoitre.vn/mien-tay-dieu-dung-vi-bien-doi-khi-hau-783507.htm'">  
                 <span>Tìm Hiểu Thêm</span>
 
                 <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -507,11 +519,11 @@
           <p class="section-subtitle">
             <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
 
-            <span>Tác hại của thuốc lá</span>
+            <span>Tuy nhiên</span>
           </p>
 
           <h2 class="h2 section-title">
-            Hiểu Biết Về Nguy Hại Của Hút Thuốc: <strong>Bảo Vệ Sức Khỏe Của Bạn</strong>
+            Hậu quả nghiêm trọng của biến đổi môi trường và  <strong>HẠN MẶN</strong>
           </h2>
 
           <ul class="service-list">
@@ -526,11 +538,10 @@
                 <h3 class="h3 card-title">Những điều cần biết</h3>
 
                 <p class="card-text">
-                  Tempor incididunt ut labores
-                  dolore magna suspene
+                  Hạn, mặn ở miền Tây: Còn 2 đợt xâm nhập mặn nữa
                 </p>
 
-                <a href="#" class="btn-link">
+                <a href="https://tuoitre.vn/han-man-o-mien-tay-con-2-dot-xam-nhap-man-nua-20240420092020673.htm" class="btn-link">
                   <span>Read More</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -546,14 +557,13 @@
                   <ion-icon name="earth-outline"></ion-icon>
                 </div>
 
-                <h3 class="h3 card-title">Thuốc lá và tác hại</h3>
+                <h3 class="h3 card-title">Tác hại</h3>
 
                 <p class="card-text">
-                  Tempor incididunt ut labores
-                  dolore magna suspene
+                  ĐBSCL thiệt hại hơn 70.000 tỷ đồng mỗi năm do giặc mặn
                 </p>
 
-                <a href="#" class="btn-link">
+                <a href="https://vnexpress.net/dbscl-thiet-hai-hon-70-000-ty-dong-moi-nam-do-xam-nhap-man-4722653.html" class="btn-link">
                   <span>Read More</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -569,14 +579,13 @@
                   <ion-icon name="flower-outline"></ion-icon>
                 </div>
 
-                <h3 class="h3 card-title">Từ bỏ sử dụng thuốc lá</h3>
+                <h3 class="h3 card-title">Ngày càng tăng</h3>
 
                 <p class="card-text">
-                  Tempor incididunt ut labores
-                  dolore magna suspene
+                  Xâm nhập mặn tại ĐBSCL ngày càng gay gắt, bất thường
                 </p>
 
-                <a href="#" class="btn-link">
+                <a href="https://vnexpress.net/xam-nhap-man-tai-dbscl-ngay-cang-gay-gat-bat-thuong-4738770.html" class="btn-link">
                   <span>Read More</span>
 
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -592,14 +601,13 @@
                     <ion-icon name="boat-outline"></ion-icon>
                   </div>
   
-                  <h3 class="h3 card-title">Chuyên gia tư vấn</h3>
+                  <h3 class="h3 card-title">Tương lai</h3>
   
                   <p class="card-text">
-                    Tempor incididunt ut labores
-                    dolore magna suspene
+                    Biến đổi khí hậu ngày càng diễn biến phức tạp, khó lường
                   </p>
   
-                  <a  class="btn-link">
+                  <a  class="btn-link" href="https://tuoitre.vn/nam-nay-tien-giang-long-an-bi-xam-nhap-man-nang-nhat-20240412152508076.htm">
                     <span>Read More</span>
   
                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -906,49 +914,66 @@
           </p>
 
           <h2 class="h2 section-title">
-            Chúng tôi cung cấp thông tin đến từ <strong>chuyên gia uy tín</strong>
+            Thông tin đến từ <strong>chuyên gia</strong>
           </h2>
 
           <div class="testi-card">
 
             <figure class="card-avatar">
-              <img src="./assets/images/doctor.jpg" width="60" height="60" loading="lazy" alt="David S. Neuman">
+              <img src="./assets/images/thuy.png" width="60" height="60" loading="lazy" alt="David S. Neuman">
             </figure>
 
             <div>
+              <h3 class="testi-name">Cục Thủy Lợi</h3>
+
               <blockquote class="testi-text">
-                Các bạn sinh viên còn trẻ, tràn đầy nhựa sống nên tự giác tìm hiểu và bản vệ bản thân trước những tác hại của thuốc lá. Hút thuốc lá có thể gây ung thư với mọi cơ quan trong cơ thể của bạn: phổi, bàng quang, máu, cổ tử cung, đại tràng, thực quản, thận, vòm họng, gan, tụy, dạ dày. Hút thuốc cũng gây ra: Bệnh tim mạch, đột quỵ, bệnh phổi như khí phế thũng và viêm phế quản. Người hút thuốc có nhiều nguy cơ: Mắc bệnh lao.
-              </blockquote>
+                Xâm nhập mặn có xu hướng ảnh hưởng đến nguồn nước ngọt tại Đồng bằng sông Cửu Long (ĐBSCL) sớm hơn trước 1 - 1,5 tháng, gay gắt và bất thường, theo báo cáo về công tác phòng, chống hạn hán, xâm nhập mặn vùng ĐBSCL của Cục Thủy lợi (Bộ NN&PTNT).              </blockquote>
 
-              <h3 class="testi-name">Lê Thanh Vũ</h3>
+              <h3 class="testi-name">Cục Thủy Lợi</h3>
 
-              <p class="testi-title">ThS-Trưởng Điều dưỡng</p>
+              <!-- <p class="testi-title">ThS-Trưởng Điều dưỡng</p> -->
             </div>
 
           </div>
           <div class="testi-card">
 
             <figure class="card-avatar">
-              <img src="./assets/images/doctor.jpg" width="60" height="60" loading="lazy" alt="David S. Neuman">
+              <img src="./assets/images/thuy.png" width="60" height="60" loading="lazy" alt="David S. Neuman">
             </figure>
 
             <div>
               <blockquote class="testi-text">
-                Cai thuốc lá là một trong những thách thức khó khăn nhất mà một người có thể đối mặt trong cuộc sống. Đó không chỉ là việc từ bỏ một thói quen, mà còn là một cuộc chiến với chính bản thân mình. Mỗi hơi thở không còn được quen thuộc, mỗi giờ phút trôi qua như là một thử thách mới đầy khó khăn.
-              </blockquote>
+                Biến đổi khí hậu - nước biển dâng và toàn cầu hóa kinh tế - hội nhập quốc tế là các thách thức toàn cầu. Trái đất càng ấm lên, băng tan càng nhanh, đồng bằng sông Cửu Long đối đầu với ngập, lún chìm, bờ biển xâm thực và mặn càng xâm nhập sâu.              </blockquote>
 
-              <h3 class="testi-name">Lê Thanh Vũ</h3>
+              <!-- <h3 class="testi-name">Lê Thanh Vũ</h3>
 
-              <p class="testi-title">ThS-Trưởng Điều dưỡng</p>
+              <p class="testi-title">ThS-Trưởng Điều dưỡng</p> -->
+            </div>
+
+          </div>
+          <div class="testi-card">
+
+            <figure class="card-avatar">
+              <img src="./assets/images/thuy.png" width="60" height="60" loading="lazy" alt="David S. Neuman">
+            </figure>
+
+            <div>
+              <blockquote class="testi-text">
+                Tuy nhiên vẫn có những lợi ích kinh tế từ những vùng ngập mặn có thể khai thác được bằng cách chuyển đổi cơ cấu kinh tế.
+              <!-- <h3 class="testi-name">Lê Thanh Vũ</h3>
+
+              <p class="testi-title">ThS-Trưởng Điều dưỡng</p> -->
             </div>
 
           </div>
         </div>
 
         <figure class="testi-banner">
-          <img src="./assets/images/lung.jpg" width="960" height="846" loading="lazy" alt="Rhinoceros"
-            class="img-cover">
+          <iframe width="960" height="846" src="https://www.youtube.com/embed/oWfaOvkQ9qs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>
+        
+        
+        
 
       </section>
 
@@ -960,7 +985,7 @@
         - #PARTNER
       -->
 
-      <section class="section partner">
+      <!-- <section class="section partner">
         <div class="container">
 
           <a href="#" class="partner-logo">
@@ -1003,7 +1028,7 @@
           </a>
 
         </div>
-      </section>
+      </section> -->
 
 
 
@@ -1019,13 +1044,14 @@
           <p class="section-subtitle">
             <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
 
-            <span>Event & Program</span>
+            <span>Chung tay đẩy lùi hạn mặn</span>
 
             <img src="./assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
           </p>
 
           <h2 class="h2 section-title">
-            Our Most Popular Causes For <strong>Building Fund</strong>
+            Những tổ chức gây quỹ 
+ <strong>vì môi trường</strong>
           </h2>
 
           <ul class="event-list">
@@ -1034,25 +1060,23 @@
               <div class="event-card">
 
                 <time class="card-time" datetime="01-05">
-                  <span class="month">Jan</span>
+                  <span class="month">Mar</span>
 
-                  <span class="date">05</span>
+                  <span class="date">17</span>
                 </time>
 
                 <div class="wrapper">
 
                   <div class="card-content">
-                    <p class="card-subtitle">Ocean Water</p>
+                    <p class="card-subtitle">Trái Tim MoMo</p>
 
-                    <h3 class="card-title">Far from the countries Vokalia and Consonantia 2022</h3>
+                    <h3 class="card-title">Chung tay gây quỹ trồng 1.000 cây bần chua và phát động trồng cây bảo vệ môi trường tại rừng ngập mặn tại Cù Lao Dung, Sóc Trăng (Đợt 2)</h3>
 
                     <p class="card-text">
-                      Sit amet consectetur adipiscing elit sed do eiusmod tempor
-                    </p>
-                  </div>
+                      Mỗi hecta rừng ngập mặn chứa lượng carbon cao gấp 4 lần so với các khu rừng mưa nhiệt đới khác. Mục tiêu của dự án là trồng được 2.500 cây, tương đương với 1 hecta rừng ngập mặn.                  </div>
 
-                  <button class="btn btn-white">
-                    <span>View Events</span>
+                  <button class="btn btn-white" onclick="window.location.href='https://momo.vn/cong-dong/chung-tay-gay-quy-trong-1000-cay-ban-chua-tai-soc-trang-dot-2'">
+                    <span>View Organization</span>
 
                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                   </button>
@@ -1074,17 +1098,17 @@
                 <div class="wrapper">
 
                   <div class="card-content">
-                    <p class="card-subtitle">Ocean Water</p>
+                    <p class="card-subtitle">WWF VietNam</p>
 
-                    <h3 class="card-title">Far from the countries Vokalia and Consonantia 2022</h3>
+                    <h3 class="card-title">Tổ chức Quốc tế về Bảo tồn Thiên nhiên tại Việt Nam (WWF-Việt Nam) là một trong những tổ chức bảo tồn hàng đầu tại Việt Nam</h3>
 
                     <p class="card-text">
-                      Sit amet consectetur adipiscing elit sed do eiusmod tempor
+                      Sứ mệnh của chúng tôi là ngăn chặn sự xuống cấp của môi trường tự nhiên tại Việt Nam và xây dựng một tương lai trong đó con người sống hài hòa với thiên nhiên.
                     </p>
                   </div>
 
-                  <button class="btn btn-white">
-                    <span>View Events</span>
+                  <button class="btn btn-white" onclick="window.location.href='https://vietnam.panda.org/'">
+                    <span>View Organization</span>
 
                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                   </button>
@@ -1106,17 +1130,16 @@
                 <div class="wrapper">
 
                   <div class="card-content">
-                    <p class="card-subtitle">Ocean Water</p>
+                    <p class="card-subtitle">Worldwildlife</p>
 
-                    <h3 class="card-title">Far from the countries Vokalia and Consonantia 2022</h3>
+                    <h3 class="card-title">Our mission is to conserve nature and reduce the most pressing threats to the diversity of life on Earth.</h3>
 
                     <p class="card-text">
-                      Sit amet consectetur adipiscing elit sed do eiusmod tempor
-                    </p>
+                      We collaborate with local communities to conserve the natural resources we all depend on and build a future in which people and nature thrive. Together with partners at all levels, we transform markets and policies toward sustainability, tackle the threats driving the climate crisis, and protect and restore wildlife and their habitats.                    </p>
                   </div>
 
-                  <button class="btn btn-white">
-                    <span>View Events</span>
+                  <button class="btn btn-white" onclick="window.location.href='https://www.worldwildlife.org/'">
+                    <span>View Organization</span>
 
                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                   </button>

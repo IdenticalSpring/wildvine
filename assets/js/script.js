@@ -50,3 +50,4 @@ function scrollToCard(cardId) {
   var card = document.getElementById(cardId);
   card.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
